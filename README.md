@@ -113,4 +113,9 @@ The supplied MIT 18.05 statistics notes extend beyond the probability and simula
 - **Multiple linear regression:** A linear model that uses multiple predictor variables to explain or predict a response.
 - **Regression to the mean:** The tendency for unusually high or low measurements to be followed, on average, by measurements closer to the population mean when the measurements are imperfectly correlated.
 
+## Statistics concepts
+
+### Studio 5: Matching birthdays and derangements
+
+The birthday simulation models each person's birthday as an independent, uniformly selected day of the year. Each simulated room is one trial; the estimated probability of a match is the fraction of rooms in which at least two people share a birthday. This illustrates how the number of possible pairs grows as the room gets larger, so a match becomes likely with far fewer than 365 people. The optional derangement simulation samples random permutations and estimates the probability that no item remains in its original position.
 
