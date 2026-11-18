@@ -115,7 +115,7 @@ The supplied MIT 18.05 statistics notes extend beyond the probability and simula
 
 ## Statistics concepts
 
-### Studio 5: Matching birthdays and derangements
+### Studio 5: Bayesian updating with dice
 
-The birthday simulation models each person's birthday as an independent, uniformly selected day of the year. Each simulated room is one trial; the estimated probability of a match is the fraction of rooms in which at least two people share a birthday. This illustrates how the number of possible pairs grows as the room gets larger, so a match becomes likely with far fewer than 365 people. The optional derangement simulation samples random permutations and estimates the probability that no item remains in its original position.
+The simulation begins with five hypotheses: that the chosen die has 4, 6, 8, 12, or 20 sides. A prior distribution assigns probabilities to these hypotheses before any rolls are observed. After each roll, the likelihood of that result under each die is combined with the current probabilities to calculate a posterior distribution. Repeating this update shows how evidence changes belief about which die was selected. The optional censored-data problem records only whether a roll is 1, illustrating Bayesian updating when the full outcome is unavailable.
 
