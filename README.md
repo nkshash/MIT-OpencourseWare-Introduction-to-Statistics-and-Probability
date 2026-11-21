@@ -111,25 +111,25 @@ The R scripts in this repository implement simulations and visualizations for St
 
 ### Probability and simulation
 
-#### Studio 1 — Birthday matching and derangements
+#### Studio 1 — Birthday matching and derangements([tutorial_r/mit18_05_s22_studio1_done.r](tutorial_r/mit18_05_s22_studio1_done.r))
 
 Simulates birthdays assigned independently and uniformly across the days of a year. Each simulated room is one trial; the estimated probability of a shared birthday is the fraction of rooms containing at least one match. The optional derangement simulation estimates the probability that a random permutation leaves no item in its original position.
 
 **Study focus:** sample spaces, simulation, pair counts, and empirical probability.
 
-#### Studio 2 — Binomial probabilities and expected payoff
+#### Studio 2 — Binomial probabilities and expected payoff([tutorial_r/mit18_05_s22_studio2_done.r](tutorial_r/mit18_05_s22_studio2_done.r))
 
 Models the number of heads in a fixed number of independent coin tosses with a binomial distribution. Simulated probabilities are compared with exact binomial probabilities. The gambling-game payoff for $k$ heads is $k^2 - 7k$, and its expected value is calculated as a probability-weighted average.
 
 **Study focus:** binomial distributions, cumulative probabilities, expectation, and decision-making under uncertainty.
 
-#### Studio 3 — Exponential distributions and averages
+#### Studio 3 — Exponential distributions and averages([tutorial_r/mit18_05_s22_studio3_done.r](tutorial_r/mit18_05_s22_studio3_done.r))
 
 Uses exponential waiting-time samples with rate parameter $\lambda$, for which the mean is $1/\lambda$. Histograms compare individual observations with sample averages. The standard deviation of the average of $n$ independent observations is $1/(\lambda\sqrt{n})$.
 
 **Study focus:** continuous distributions, sampling distributions, variability of averages, and the Central Limit Theorem.
 
-#### Studio 4 — Covariance, correlation, and the Central Limit Theorem
+#### Studio 4 — Covariance, correlation, and the Central Limit Theorem([tutorial_r/mit18_05_s22_studio4_done.r](tutorial_r/mit18_05_s22_studio4_done.r))
 
 Simulates roulette winnings. A one-dollar bet on red earns $+1$ with probability $18/38$ and $-1$ with probability $20/38$. Shared games create covariance between two players' winnings; additional independent games increase one player's variance and tend to reduce the correlation. A final simulation compares sums of roulette outcomes with a normal curve.
 
@@ -137,37 +137,37 @@ Simulates roulette winnings. A one-dollar bet on red earns $+1$ with probability
 
 ### Statistics and inference
 
-#### Studio 5 — Bayesian updating with dice
+#### Studio 5 — Bayesian updating with dice([tutorial_r/mit18_05_s22_studio5_done.r](tutorial_r/mit18_05_s22_studio5_done.r))
 
 Treats five dice with 4, 6, 8, 12, or 20 sides as competing hypotheses. Each roll updates prior probabilities using the likelihood of the observed result. The optional censored-data exercise uses only whether a roll is a 1. A zero-prior example demonstrates that Bayesian updating cannot assign positive posterior probability to a hypothesis whose prior probability is zero.
 
 **Study focus:** hypotheses, likelihood, prior and posterior distributions, and sequential evidence.
 
-#### Studio 6 — Cauchy distributions and the lighthouse problem
+#### Studio 6 — Cauchy distributions and the lighthouse problem([tutorial_r/mit18_05_s22_studio6_done.r](tutorial_r/mit18_05_s22_studio6_done.r))
 
 Compares normal and Cauchy distributions, with emphasis on the effect of heavy tails on sample averages. The lighthouse exercise estimates an unknown location from observed landing positions by evaluating a Cauchy likelihood over a grid, updating a uniform prior, and plotting posterior distributions and maximum a posteriori (MAP) estimates.
 
 **Study focus:** heavy-tailed distributions, likelihood, Bayesian inference, and MAP estimation.
 
-#### Studio 7 — Significance, power, and testing decisions
+#### Studio 7 — Significance, power, and testing decisions([tutorial_r/mit18_05_s22_studio7_done.r](tutorial_r/mit18_05_s22_studio7_done.r))
 
 Uses repeated coin tosses to study hypothesis testing. It constructs rejection regions for a selected significance level and evaluates Type I error and power under an alternative probability of heads. Simulations compare rejection frequencies across repeated experiments.
 
 **Study focus:** significance level, rejection regions, Type I error, power, and testing trade-offs.
 
-#### Studio 8 — Hypothesis tests and ANOVA
+#### Studio 8 — Hypothesis tests and ANOVA([tutorial_r/mit18_05_s22_studio8_done.r](tutorial_r/mit18_05_s22_studio8_done.r))
 
 Applies statistical tests to simulated and observed data. The problems use sample summaries to test population means, assess association in contingency tables, and compare average responses across three treatment groups using one-way ANOVA. The functions report test statistics and p-values.
 
 **Study focus:** test selection, p-values, categorical association, and analysis of variance.
 
-#### Studio 9 — Confidence intervals and Bayesian probabilities
+#### Studio 9 — Confidence intervals and Bayesian probabilities([tutorial_r/mit18_05_s22_studio9_done.r](tutorial_r/mit18_05_s22_studio9_done.r))
 
 Uses repeated samples from normal distributions to examine the error rates of z-based and t-based confidence intervals for a mean. It also compares frequentist confidence intervals with Bayesian posterior probabilities and includes an optional polling exercise for binary responses.
 
 **Study focus:** interval estimation, coverage, z and t procedures, and frequentist–Bayesian interpretation.
 
-#### Studio 10 — Bootstrap confidence intervals
+#### Studio 10 — Bootstrap confidence intervals ([tutorial_r/mit18_05_s22_studio10_done.r](tutorial_r/mit18_05_s22_studio10_done.r))
 
 Resamples observations with replacement to estimate uncertainty in the mean, median, and standard deviation. It constructs percentile and basic bootstrap intervals and evaluates their performance across repeated datasets, including normal and log-normal data.
 
