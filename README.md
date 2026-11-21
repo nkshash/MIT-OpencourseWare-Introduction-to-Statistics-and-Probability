@@ -100,7 +100,7 @@ The course studies discrete and continuous probability distributions, along with
 | **Standard Normal (Z)** | $z = \dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}$ | Testing a population mean when the population standard deviation $\sigma$ is known; normal approximations are also used for large-sample proportions. |
 | **Student's *t*** | $t = \dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}$, with $df=n-1$ | Testing a population mean when the population standard deviation is unknown and is estimated using the sample standard deviation $s$. |
 | **Chi-square ($\chi^2$)** | $\chi^2 = \sum_i \dfrac{(O_i-E_i)^2}{E_i}$ | Goodness-of-fit tests and tests of independence in contingency tables. |
-| **Binomial** | $X$ is the number of successes, with $X\sim\operatorname{Bin}(n,p_0)$ under the null hypothesis | Exact tests for a small sample of binary outcomes, without relying on a normal approximation. |
+| **Binomial** | $X$ is the number of successes, with $X\sim\mathrm{Bin}(n,p_0)$ under the null hypothesis | Exact tests for a small sample of binary outcomes, without relying on a normal approximation. |
 | **F** | For a two-variance comparison, $F=\dfrac{s_1^2}{s_2^2}$, with appropriate degrees of freedom | Comparing variances of independent normal populations. In ANOVA, an F statistic compares between-group variation with within-group variation. |
 
 *Notation:* $\bar{x}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $\sigma$ is the known population standard deviation, $s$ is the sample standard deviation, $n$ is the sample size, and $O_i$ and $E_i$ are observed and expected counts. The exact reference distribution and degrees of freedom depend on the test and its assumptions.
