@@ -117,5 +117,77 @@ The supplied MIT 18.05 statistics notes extend beyond the probability and simula
 
 ### Studio 5: Bayesian updating with dice
 
-The simulation begins with five hypotheses: that the chosen die has 4, 6, 8, 12, or 20 sides. A prior distribution assigns probabilities to these hypotheses before any rolls are observed. After each roll, the likelihood of that result under each die is combined with the current probabilities to calculate a posterior distribution. Repeating this update shows how evidence changes belief about which die was selected. The optional censored-data problem records only whether a roll is 1, illustrating Bayesian updating when the full outcome is unavailable.
+Five dice with 4, 6, 8, 12, or 20 sides are treated as competing hypotheses about which die was selected. Each roll supplies evidence: the likelihood of that result under each die updates the prior probabilities into a posterior distribution. The script plots how those probabilities change as rolls accumulate, and an optional censored-data exercise repeats the process when only whether the roll was a 1 is recorded. The zero-prior example shows that evidence cannot revive a hypothesis that was assigned probability zero.
+
+### Studio 6: Cauchy distributions and the lighthouse problem
+
+The first problems compare normal and Cauchy distributions, highlighting how the Cauchy distribution's heavier tails make its sample average behave differently. The lighthouse exercise uses observed landing positions to estimate an unknown lighthouse location. It evaluates the Cauchy likelihood over a grid of possible locations, updates a uniform prior after each observation, and plots the evolving posterior and maximum a posteriori (MAP) estimates.
+
+### Studio 7: Significance, power, and testing decisions
+
+This studio studies repeated coin tosses as a hypothesis-testing problem. It finds rejection regions for a chosen significance level, then calculates the actual Type I error rate and the power under an alternative probability of heads. Simulations examine how often tests reject across repeated experiments and how the choice of prior or testing strategy affects the conclusions. The examples illustrate the tradeoff between false alarms and detecting a real effect.
+
+### Studio 8: Hypothesis tests and ANOVA
+
+The problems apply statistical tests to simulated and observed data. They use sample summaries to test claims about population means, assess whether categories in a contingency table are associated, and compare the average response across three treatment groups with one-way ANOVA. The functions report test statistics and p-values so the results can be interpreted at a selected significance level.
+
+### Studio 9: Confidence intervals and Bayesian probabilities
+
+Repeated samples from normal distributions are used to estimate the error rate of z-based and t-based confidence intervals for a mean. Another problem compares the prior and posterior probability assigned to parameter values inside a confidence interval, showing how frequentist intervals and Bayesian probabilities answer different questions. An optional polling exercise simulates binary responses and reports an approximate margin of error for the estimated proportion.
+
+### Studio 10: Bootstrap confidence intervals
+
+Bootstrap samples are drawn with replacement from each observed dataset to estimate uncertainty in the mean, median, and standard deviation. The script constructs both percentile and basic bootstrap confidence intervals, then repeats the procedure across many simulated datasets to estimate how often each interval misses the true value. It compares results for normal and log-normal data, illustrating how interval performance can depend on the shape of the distribution.
+
+The scripts define functions; run a function by sourcing its studio file and calling it with the arguments described in the code. Some functions print numerical summaries, and others also draw plots in R's graphics device.
+
+## Requirements
+
+- R (base R is used for Studios 5–9).
+- The `matrixStats` package for the optimized bootstrap implementation in Studio 10:
+
+  ```r
+  install.packages("matrixStats")
+  ```
+
+  Studio 10 also includes a loop-based bootstrap implementation that can be selected by changing `run_bootstrap = run_bootstrap_matrixStats` to `run_bootstrap = run_bootstrap_loop`; the package is still loaded at the top of the supplied script.
+- Studio 6, Problem 0 and Problem 1d, source additional course helper scripts (`mit18_05_s22_studio6_problem0_draw_plot.r` and `mit18_05_s22_studio6_problem_1d.r`). Keep those helper files available at the paths expected by the script, or adjust the `source()` calls.
+- Data files are required by the data-driven functions in Studio 6 Problems 2a/2b and Studio 8 Problem 3. Pass the appropriate CSV or table file path to the function.
+
+## Running the scripts
+
+1. Open R or RStudio and set the working directory to the folder containing the scripts and any required data/helper files.
+2. Source the script for the studio you want to use. For example:
+
+   ```r
+   source("mit18_05_s22_studio5_done.r")
+   ```
+
+3. Call a function from that studio. For example, Studio 5 simulates rolls of an eight-sided die and updates from a uniform prior:
+
+   ```r
+   studio5_problem_1b(prior = rep(1 / 5, 5), nrolls = 20)
+   ```
+
+   The Studio 5 prior entries correspond, in order, to D4, D6, D8, D12, and D20. Other functions document their arguments in comments above their definitions.
+
+Example calls for functions that read data:
+
+```r
+studio6_problem_2a("lighthouse_data.csv")
+studio6_problem_2b("lighthouse_data.csv")
+studio8_problem_3("contingency_data.txt", alpha = 0.05)
+```
+
+Use the actual filenames and column/table format expected by your course data. Studio 6's provided functions expect the lighthouse CSV to include `X` and `position` columns. Studio 8 Problem 3 reads a table with `read.table()`.
+
+## Notes
+
+- Simulation and bootstrap results vary from run to run unless you set an R random seed with `set.seed(...)` before calling a function.
+- Studio 6's script contains a machine-specific `setwd()` call. Update or remove it if the helper files are stored elsewhere; paths passed to `source()` and data-reading functions must also resolve from the working directory.
+- These are educational studio solutions, not a packaged R library. Run the corresponding MIT OCW studio instructions alongside the code for full problem context and interpretation.
+
+## Source and attribution
+
+Course materials: [MIT OpenCourseWare — 18.05 Introduction to Probability and Statistics, Spring 2022](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/). Studio materials were authored by Jeremy Orloff and Jennifer French. Refer to MIT OCW's [terms of use](https://ocw.mit.edu/terms/) when reusing or sharing course materials.
 
