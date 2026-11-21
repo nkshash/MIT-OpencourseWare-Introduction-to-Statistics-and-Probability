@@ -1,4 +1,4 @@
-# MIT 18.05 — Probability & Statistics
+# MIT 18.05 — Introduction to Probability & Statistics
 
 A study-focused repository documenting my work through **MIT OpenCourseWare 18.05: Introduction to Probability and Statistics (Spring 2022)**. It combines concise concept notes with R simulations and visualizations to connect probability models, statistical inference, and computational experiments.
 
@@ -53,7 +53,7 @@ A study-focused repository documenting my work through **MIT OpenCourseWare 18.0
 | Confidence intervals | Normal, Student's *t*, and chi-square intervals |
 | Hypothesis testing | Null and alternative hypotheses, test statistics, significance, Type I error, power |
 | Resampling | Empirical distributions, nonparametric and parametric bootstrap |
-| Regression | Least squares, simple and multiple linear regression, polynomial regression, residuals, \(R^2\), overfitting |
+| Regression | Least squares, simple and multiple linear regression, polynomial regression, residuals, $R^2$, overfitting |
 
 ---
 
@@ -79,11 +79,11 @@ The course studies discrete and continuous probability distributions, along with
 | Distribution | Typical use / interpretation |
 |---|---|
 | **Continuous Uniform** | Models a value equally likely to fall anywhere within a specified interval. |
-| **Exponential** | Models waiting times between events in a Poisson process; its rate parameter is \(\lambda\). |
+| **Exponential** | Models waiting times between events in a Poisson process; its rate parameter is $\lambda$. |
 | **Normal (Gaussian)** | A symmetric, bell-shaped distribution used widely in probability and statistical inference. |
 | **Gamma** | A family of positive-valued distributions that includes the exponential distribution as a special case. |
-| **Beta** | A distribution on \([0,1]\), often used to model probabilities and as a prior for a Bernoulli or binomial probability. |
-| **Chi-square (\(\chi^2\))** | Used in inference for normal-population variance and in several goodness-of-fit and independence tests. |
+| **Beta** | A distribution on $[0,1]$, often used to model probabilities and as a prior for a Bernoulli or binomial probability. |
+| **Chi-square ($\chi^2$)** | Used in inference for normal-population variance and in several goodness-of-fit and independence tests. |
 | **Student's *t*** | Used for inference about a normal-population mean when the population variance is unknown. |
 | **F-distribution** | Used in variance-ratio procedures and analysis of variance (ANOVA). |
 
@@ -91,19 +91,19 @@ The course studies discrete and continuous probability distributions, along with
 
 - **Bivariate Normal:** A joint distribution for two normally distributed random variables, allowing their dependence to be represented through covariance or correlation.
 - **Multinomial:** A generalization of the binomial model for counts across more than two categories in a fixed number of trials.
-- **Sampling distributions:** Distributions of statistics calculated from repeated samples, such as the sample mean \(\bar{x}\) and sample variance \(s^2\). These distributions underpin confidence intervals and hypothesis tests.
+- **Sampling distributions:** Distributions of statistics calculated from repeated samples, such as the sample mean $\bar{x}$ and sample variance $s^2$. These distributions underpin confidence intervals and hypothesis tests.
 
 #### Test distributions and common test statistics
 
 | Test distribution | Test statistic | Common use |
 |---|---|---|
-| **Standard Normal (Z)** | $(z = \dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}\)$ | Testing a population mean when the population standard deviation \(\sigma\) is known; normal approximations are also used for large-sample proportions. |
-| **Student's *t*** | \(t = \dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}\), with \(df=n-1\) | Testing a population mean when the population standard deviation is unknown and is estimated using the sample standard deviation \(s\). |
-| **Chi-square (\(\chi^2\))** | \(\chi^2 = \displaystyle\sum_i \dfrac{(O_i-E_i)^2}{E_i}\) | Goodness-of-fit tests and tests of independence in contingency tables. |
-| **Binomial** | \(X=\) number of successes, with \(X\sim\operatorname{Bin}(n,p_0)\) under the null hypothesis | Exact tests for a small sample of binary outcomes, without relying on a normal approximation. |
-| **F** | For a two-variance comparison, \(F=\dfrac{s_1^2}{s_2^2}\), with appropriate degrees of freedom | Comparing variances of independent normal populations. In ANOVA, an F statistic compares between-group variation with within-group variation. |
+| **Standard Normal (Z)** | $z = \dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}$ | Testing a population mean when the population standard deviation $\sigma$ is known; normal approximations are also used for large-sample proportions. |
+| **Student's *t*** | $t = \dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}$, with $df=n-1$ | Testing a population mean when the population standard deviation is unknown and is estimated using the sample standard deviation $s$. |
+| **Chi-square ($\chi^2$)** | $\chi^2 = \sum_i \dfrac{(O_i-E_i)^2}{E_i}$ | Goodness-of-fit tests and tests of independence in contingency tables. |
+| **Binomial** | $X=$ number of successes, with $X\sim\operatorname{Bin}(n,p_0)$ under the null hypothesis | Exact tests for a small sample of binary outcomes, without relying on a normal approximation. |
+| **F** | For a two-variance comparison, $F=\dfrac{s_1^2}{s_2^2}$, with appropriate degrees of freedom | Comparing variances of independent normal populations. In ANOVA, an F statistic compares between-group variation with within-group variation. |
 
-*Notation:* \(\bar{x}\) is the sample mean, \(\mu_0\) is the hypothesized population mean, \(\sigma\) is the known population standard deviation, \(s\) is the sample standard deviation, \(n\) is the sample size, and \(O_i\) and \(E_i\) are observed and expected counts. The exact reference distribution and degrees of freedom depend on the test and its assumptions.
+*Notation:* $\bar{x}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $\sigma$ is the known population standard deviation, $s$ is the sample standard deviation, $n$ is the sample size, and $O_i$ and $E_i$ are observed and expected counts. The exact reference distribution and degrees of freedom depend on the test and its assumptions.
 
 ## Studio work
 
@@ -119,19 +119,19 @@ Simulates birthdays assigned independently and uniformly across the days of a ye
 
 #### Studio 2 — Binomial probabilities and expected payoff
 
-Models the number of heads in a fixed number of independent coin tosses with a binomial distribution. Simulated probabilities are compared with exact binomial probabilities. The gambling-game payoff for \(k\) heads is \(k^2 - 7k\), and its expected value is calculated as a probability-weighted average.
+Models the number of heads in a fixed number of independent coin tosses with a binomial distribution. Simulated probabilities are compared with exact binomial probabilities. The gambling-game payoff for $k$ heads is $k^2 - 7k$, and its expected value is calculated as a probability-weighted average.
 
 **Study focus:** binomial distributions, cumulative probabilities, expectation, and decision-making under uncertainty.
 
 #### Studio 3 — Exponential distributions and averages
 
-Uses exponential waiting-time samples with rate parameter \(\lambda\), for which the mean is \(1/\lambda\). Histograms compare individual observations with sample averages. The standard deviation of the average of \(n\) independent observations is \(1/(\lambda\sqrt{n})\).
+Uses exponential waiting-time samples with rate parameter $\lambda$, for which the mean is $1/\lambda$. Histograms compare individual observations with sample averages. The standard deviation of the average of $n$ independent observations is $1/(\lambda\sqrt{n})$.
 
 **Study focus:** continuous distributions, sampling distributions, variability of averages, and the Central Limit Theorem.
 
 #### Studio 4 — Covariance, correlation, and the Central Limit Theorem
 
-Simulates roulette winnings. A one-dollar bet on red earns \(+1\) with probability \(18/38\) and \(-1\) with probability \(20/38\). Shared games create covariance between two players' winnings; additional independent games increase one player's variance and tend to reduce the correlation. A final simulation compares sums of roulette outcomes with a normal curve.
+Simulates roulette winnings. A one-dollar bet on red earns $+1$ with probability $18/38$ and $-1$ with probability $20/38$. Shared games create covariance between two players' winnings; additional independent games increase one player's variance and tend to reduce the correlation. A final simulation compares sums of roulette outcomes with a normal curve.
 
 **Study focus:** covariance, correlation, dependence, and normal approximation.
 
@@ -254,7 +254,7 @@ Resamples observations with replacement to estimate uncertainty in the mean, med
 - **Residual:** The difference between an observed response and its predicted value.
 - **Homoscedasticity:** The assumption that residual variance is roughly constant across predictor values; changing variance is heteroscedasticity.
 - **Overfitting:** Fitting observed data, including noise, so closely that performance on new data may be poor.
-- **Coefficient of determination (\(R^2\)):** A measure, in common regression settings, of the proportion of response variability accounted for by the fitted model.
+- **Coefficient of determination ($R^2$):** A measure, in common regression settings, of the proportion of response variability accounted for by the fitted model.
 - **Multiple linear regression:** A linear model with multiple predictors.
 - **Regression to the mean:** The tendency for unusually high or low measurements to be followed, on average, by measurements closer to the population mean when measurements are imperfectly correlated.
 
