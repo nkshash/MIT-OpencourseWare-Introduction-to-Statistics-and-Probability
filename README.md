@@ -1,4 +1,4 @@
-# MIT 18.05 Introduction to Probability & Statistics
+# MIT 18.05 — Probability & Statistics
 
 A study-focused repository documenting my work through **MIT OpenCourseWare 18.05: Introduction to Probability and Statistics (Spring 2022)**. It combines concise concept notes with R simulations and visualizations to connect probability models, statistical inference, and computational experiments.
 
