@@ -111,7 +111,7 @@ The R scripts in this repository implement simulations and visualizations for St
 
 ### Probability and simulation
 
-#### Studio 1 — Birthday matching and derangements([tutorial_r/mit18_05_s22_studio1_done.r](tutorial_r/mit18_05_s22_studio1_done.r))
+#### Studio 1 — Birthday matching and derangements([tutorial_r/mit18_05_s22_studio1_done.r](tutorial_r/mit18_05_s22_studio1_r_t1.r))
 
 Simulates birthdays assigned independently and uniformly across the days of a year. Each simulated room is one trial; the estimated probability of a shared birthday is the fraction of rooms containing at least one match. The optional derangement simulation estimates the probability that a random permutation leaves no item in its original position.
 
