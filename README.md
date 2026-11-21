@@ -97,7 +97,7 @@ The course studies discrete and continuous probability distributions, along with
 
 | Test distribution | Test statistic | Common use |
 |---|---|---|
-| **Standard Normal (Z)** | \(z = \dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}\) | Testing a population mean when the population standard deviation \(\sigma\) is known; normal approximations are also used for large-sample proportions. |
+| **Standard Normal (Z)** | $(z = \dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}\)$ | Testing a population mean when the population standard deviation \(\sigma\) is known; normal approximations are also used for large-sample proportions. |
 | **Student's *t*** | \(t = \dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}\), with \(df=n-1\) | Testing a population mean when the population standard deviation is unknown and is estimated using the sample standard deviation \(s\). |
 | **Chi-square (\(\chi^2\))** | \(\chi^2 = \displaystyle\sum_i \dfrac{(O_i-E_i)^2}{E_i}\) | Goodness-of-fit tests and tests of independence in contingency tables. |
 | **Binomial** | \(X=\) number of successes, with \(X\sim\operatorname{Bin}(n,p_0)\) under the null hypothesis | Exact tests for a small sample of binary outcomes, without relying on a normal approximation. |
